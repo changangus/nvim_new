@@ -1,0 +1,2 @@
+require('anguschang')
+print('initalized')
