@@ -1,2 +1,2 @@
 require('anguschang')
-print('initalized')
+print('NVIM Ready')
