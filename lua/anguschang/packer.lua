@@ -71,7 +71,9 @@ return require('packer').startup(function(use)
   use({
 	"Pocco81/auto-save.nvim",
   })
+  -- Comment
   use {
     'numToStr/Comment.nvim',
   }
+  use { 'kdheepak/lazygit.nvim' }
 end)
