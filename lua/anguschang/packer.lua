@@ -52,13 +52,16 @@ return require('packer').startup(function(use)
     }
     -- Git Blame
     use 'f-person/git-blame.nvim'
-    -- surround text
-    use {
-        "ur4ltz/surround.nvim",
+    -- nvim surround
+    use({
+       "kylechui/nvim-surround",
+        tag = "*", -- Use for stability; omit to use `main` branch for the latest features
         config = function()
-            require "surround".setup { mappings_style = "sandwich" }
+            require("nvim-surround").setup({
+                -- Configuration here, or leave empty to use defaults
+            })
         end
-    }
+    })
     -- Prettier
     use('jose-elias-alvarez/null-ls.nvim')
     use('MunifTanjim/prettier.nvim')
