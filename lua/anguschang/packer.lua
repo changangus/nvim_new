@@ -71,6 +71,13 @@ return require('packer').startup(function(use)
   use({
 	"Pocco81/auto-save.nvim",
   })
+  -- autopairs
+  use {
+    'windwp/nvim-autopairs',
+    config = function()
+      require('nvim-autopairs').setup()
+    end
+  }
   -- Comment
   use {
     'numToStr/Comment.nvim',
