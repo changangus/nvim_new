@@ -23,13 +23,4 @@ vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undofile = true
 
-vim.cmd('highlight SignColumn guibg=NONE ctermbg=NONE')
-vim.cmd('highlight LineNr guibg=NONE ctermbg=NONE')
-vim.cmd('highlight CursorLineNr guibg=NONE ctermbg=NONE')
-vim.cmd('highlight StatusLine gui=NONE cterm=NONE')
-vim.cmd('highlight StatusLineNC gui=NONE cterm=NONE')
-vim.cmd('highlight EndOfBuffer guibg=NONE ctermbg=NONE')
-vim.cmd('highlight Directory gui=NONE cterm=NONE')
 vim.cmd('highlight WinSeparator gui=NONE cterm=NONE')
-vim.cmd('highlight CursorLine guibg=#403257')
-

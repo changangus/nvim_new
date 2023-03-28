@@ -40,6 +40,3 @@ vim.diagnostic.config({
   },
 })
 
-
-print('all good')
-
