@@ -19,6 +19,7 @@ vim.opt.smartindent = true
 vim.opt.wrap = true
 vim.opt.updatetime = 300
 vim.opt.signcolumn = "yes"
+vim.wo.cursorline = true
 
 vim.opt.swapfile = false
 vim.opt.backup = false
