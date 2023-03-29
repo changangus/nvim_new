@@ -63,3 +63,7 @@ prettier.setup({
     timeout = 5000,
   }
 })
+
+vim.keymap.set("n", "<Leader>ff", function()
+  prettier.format()
+end, { desc = "[prettier] format" })
