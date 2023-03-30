@@ -1,7 +1,7 @@
 -- Harpoon
 require("harpoon").setup({
   menu = {
-    width = 110,
+    width = 90,
     height = 20,
   }
 })
