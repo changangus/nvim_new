@@ -54,7 +54,7 @@ return require('packer').startup(function(use)
     use 'f-person/git-blame.nvim'
     -- nvim surround
     use({
-       "kylechui/nvim-surround",
+        "kylechui/nvim-surround",
         tag = "*", -- Use for stability; omit to use `main` branch for the latest features
         config = function()
             require("nvim-surround").setup({
@@ -74,6 +74,12 @@ return require('packer').startup(function(use)
     -- autosave
     use({
         "Pocco81/auto-save.nvim",
+        config = function()
+            require("auto-save").setup {
+                enabled = false
+
+            }
+        end,
     })
     -- autopairs
     use {
