@@ -6,7 +6,11 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
-    use 'preservim/nerdtree'
+    -- nvim tree
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = 'nvim-tree/nvim-web-devicons'
+    }
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
         -- or
@@ -41,8 +45,6 @@ return require('packer').startup(function(use)
     }
     -- Github CoPilot
     use 'github/copilot.vim'
-    -- Icons
-    use 'ryanoasis/vim-devicons'
     -- Harpoon
     use 'ThePrimeagen/harpoon'
     -- LuaLine
