@@ -7,14 +7,6 @@ require("telescope").setup({
       preview_width = 0.6,
     },
   },
-  extensions = {
-    coc = {
-      theme = "ivy",
-    },
-    harpoon = {
-      theme = "ivy",
-    },
-  }
 })
 
 local builtin = require('telescope.builtin')
