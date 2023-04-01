@@ -22,5 +22,8 @@ end
 
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 
+-- change the background of nvim-tree
+vim.cmd('hi NvimTreeNormal guibg=bg ctermbg=NONE')
+
 vim.keymap.set('n', '<leader>ft', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>nf', ':NvimTreeFindFileToggle<CR>', { noremap = true, silent = true })
