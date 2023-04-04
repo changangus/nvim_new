@@ -2,10 +2,15 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-require('nvim-tree').setup()
+require('nvim-tree').setup {
+  actions = {
+    open_file = {
+      quit_on_open = true,
+    }
+  }
+}
 
 local function open_nvim_tree(data)
-
   -- buffer is a directory
   local directory = vim.fn.isdirectory(data.file) == 1
 
