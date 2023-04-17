@@ -95,5 +95,6 @@ return require('packer').startup(function(use)
     'numToStr/Comment.nvim',
   }
   use { 'kdheepak/lazygit.nvim' }
+  --github pulls
   use "/Users/anguswork/Developer/nvim_plugins/github_pulls.nvim"
 end)
