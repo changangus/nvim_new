@@ -96,5 +96,5 @@ return require('packer').startup(function(use)
   }
   use { 'kdheepak/lazygit.nvim' }
   --github pulls
-  use "/Users/anguswork/Developer/nvim_plugins/github_pulls.nvim"
+  use "changangus/github_pulls.nvim"
 end)
