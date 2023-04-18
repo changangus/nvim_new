@@ -10,6 +10,7 @@ require("telescope").setup({
 })
 
 local builtin = require('telescope.builtin')
+vim.cmd('highlight TelescopeNormal guibg=bg')
 
 vim.keymap.set('n', '<leader>a', function() builtin.diagnostics({ bufnr = 0 }) end)
 vim.keymap.set('n', 'gr', function() builtin.lsp_references() end)
