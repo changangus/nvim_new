@@ -99,6 +99,10 @@ return require('packer').startup(function(use)
   use "changangus/github_pulls.nvim"
   -- toggleterm
   use { "akinsho/toggleterm.nvim", tag = '*', config = function()
-    require("toggleterm").setup()
+    require("toggleterm").setup({
+      float_opts = {
+        border = "curved",
+      }
+    })
   end }
 end)
