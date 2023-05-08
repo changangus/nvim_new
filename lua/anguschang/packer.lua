@@ -105,4 +105,14 @@ return require('packer').startup(function(use)
       }
     })
   end }
+  use {
+    "ceuk/nx.nvim",
+    dependencies = {
+      "nvim-telescope/telescope.nvim",
+    },
+    config = function()
+      vim.keymap.set("n", "<leader>nxa", ":Telescope nx actions<CR>", { desc = "NX Actions" })
+      vim.keymap.set("n", "<leader>nxr", require("nx").setup, { desc = "NX init/reload" })
+    end,
+  }
 end)
