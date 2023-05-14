@@ -8,7 +8,6 @@ vim.g.markdown_fenced_languages = {'javascript=javascriptreact', 'typescript=typ
 -- Options:
 vim.opt.scrolloff = 8
 vim.opt.number = true
-vim.opt.relativenumber = true
 vim.opt.mouse = "a"
 vim.opt.filetype = "on"
 vim.opt.filetype = "indent"
