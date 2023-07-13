@@ -1,0 +1,19 @@
+{
+  "languageserver": {
+    "rust": {
+      "command": "rust-analyzer",
+      "filetypes": ["rust"],
+      "rootPatterns": ["Cargo.toml"]
+    },
+    "graphql": {
+      "command": "graphql-lsp",
+      "args": ["server", "-m", "stream"],
+      "filetypes": ["typescript", "typescriptreact", "graphql"],
+      "initializationOptions": {
+        "headers": {
+          "Content-Length": "0"
+        }
+      }
+    }
+  }
+}
