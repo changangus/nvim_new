@@ -76,7 +76,7 @@ return require('packer').startup(function(use)
   }
   use { 'kdheepak/lazygit.nvim' }
   --github pulls
-  use "changangus/github_pulls.nvim"
+  use "changangus/gh-list.nvim"
   -- toggleterm
   use { "akinsho/toggleterm.nvim", tag = '*', config = function()
     require("toggleterm").setup({
