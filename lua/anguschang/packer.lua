@@ -2,7 +2,7 @@
 
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
-
+ 
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
@@ -97,4 +97,5 @@ return require('packer').startup(function(use)
       vim.keymap.set("n", "<leader>nxr", require("nx").setup, { desc = "NX init/reload" })
     end
   }
+  use { 'mg979/vim-visual-multi' }
 end)
