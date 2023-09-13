@@ -31,3 +31,5 @@ map('n', '<F4>', ':vertical resize -5<CR>', { noremap = true })
 map('n', '<F5>', ':vertical resize +5<CR>', { noremap = true })
 map('n', '<F6>', ':resize -5<CR>', { noremap = true })
 map('n', '<F7>', ':resize +5<CR>', { noremap = true })
+-- exit terminal mode
+map('t', '<Esc>', '<C-\\><C-n>', { noremap = true })
