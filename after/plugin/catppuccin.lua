@@ -1,4 +1,4 @@
-require('catppuccin').setup({
+require('catppuccin').setup {
   color_overrides = {
     mocha = {
       lavender = '#9ca8f7',
@@ -8,11 +8,11 @@ require('catppuccin').setup({
   highlight_overrides = {
     all = function(colors)
       return {
-        ['@constructor.tsx'] = { fg = colors.peach },
--- https://github.com/catppuccin/nvim/blob/main/lua/catppuccin/groups/integrations/treesitter.lua
+        ['@tag.tsx'] = { fg = colors.peach },
+        -- https://github.com/catppuccin/nvim/blob/main/lua/catppuccin/groups/integrations/treesitter.lua
       }
     end
   }
-})
+}
 
 vim.cmd.colorscheme 'catppuccin'

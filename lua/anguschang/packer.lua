@@ -12,7 +12,7 @@ return require('packer').startup(function(use)
     requires = 'nvim-tree/nvim-web-devicons'
   }
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    'nvim-telescope/telescope.nvim',
     -- or
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
@@ -88,9 +88,9 @@ return require('packer').startup(function(use)
   -- Emmet 
   use { 'mattn/emmet-vim' }
   use {
-    "ceuk/nx.nvim",
-    dependencies = {
-      "nvim-telescope/telescope.nvim",
+    'Equilibris/nx.nvim',
+    requires = {
+      'nvim-telescope/telescope.nvim'
     },
     config = function()
       vim.keymap.set("n", "<leader>nxa", ":Telescope nx actions<CR>", { desc = "NX Actions" })
