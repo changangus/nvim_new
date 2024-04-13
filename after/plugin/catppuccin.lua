@@ -10,6 +10,7 @@ require('catppuccin').setup {
       return {
         ['@tag.tsx'] = { fg = colors.peach },
         -- https://github.com/catppuccin/nvim/blob/main/lua/catppuccin/groups/integrations/treesitter.lua
+        ["@tag.attribute.tsx"] = { fg = colors.mauve, style = { "italic" } },
       }
     end
   }
