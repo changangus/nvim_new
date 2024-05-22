@@ -98,4 +98,5 @@ return require('packer').startup(function(use)
     end
   }
   use { 'mg979/vim-visual-multi' }
+  use { 'fatih/vim-go' }
 end)
