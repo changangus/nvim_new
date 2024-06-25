@@ -3,7 +3,8 @@ require("harpoon").setup({
   menu = {
     width = 90,
     height = 20,
-  }
+  },
+  mark_branch = true
 })
 
 vim.keymap.set('n', '<leader>lv', ':lua require("harpoon.ui").toggle_quick_menu()<CR>', { noremap = true })
