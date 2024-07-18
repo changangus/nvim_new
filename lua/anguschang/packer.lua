@@ -53,16 +53,6 @@ return require('packer').startup(function(use)
     'lewis6991/gitsigns.nvim',
     -- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
   }
-  -- autosave
-  use({
-    "Pocco81/auto-save.nvim",
-    config = function()
-      require("auto-save").setup {
-        enabled = false
-
-      }
-    end,
-  })
   -- autopairs
   use {
     'windwp/nvim-autopairs',
@@ -74,6 +64,7 @@ return require('packer').startup(function(use)
   use {
     'numToStr/Comment.nvim',
   }
+  -- lazygit
   use { 'kdheepak/lazygit.nvim' }
   --github pulls
   use "changangus/gh-list.nvim"
@@ -87,6 +78,7 @@ return require('packer').startup(function(use)
   end }
   -- Emmet 
   use { 'mattn/emmet-vim' }
+  -- Nx
   use {
     'Equilibris/nx.nvim',
     requires = {
@@ -98,5 +90,4 @@ return require('packer').startup(function(use)
     end
   }
   use { 'mg979/vim-visual-multi' }
-  use { 'fatih/vim-go' }
 end)

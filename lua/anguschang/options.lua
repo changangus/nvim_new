@@ -20,9 +20,50 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.smarttab = true
 vim.opt.wrap = true
-vim.opt.updatetime = 300
+vim.opt.updatetime = 100
 vim.opt.signcolumn = "yes"
 vim.wo.cursorline = true
+
+
+-- Set up fillchars for fold characters
+vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
+
+local fcs = vim.opt.fillchars:get()
+
+local function get_fold(lnum)
+	if vim.fn.foldlevel(lnum) <= vim.fn.foldlevel(lnum - 1) then return ' ' end
+	return vim.fn.foldclosed(lnum) == -1 and fcs.foldopen or fcs.foldclose
+end
+
+_G.get_statuscol = function()
+	return get_fold(vim.v.lnum) .. "%s%l "
+end
+
+-- Custom fold text function to remove fold numbers
+function _G.custom_foldtext()
+  local line = vim.fn.getline(vim.v.foldstart)
+  return line .. ' ...'
+end
+
+vim.o.statuscolumn = "%!v:lua.get_statuscol()"
+
+vim.o.foldtext = 'v:lua.custom_foldtext()'
+
+-- Enable folding
+vim.o.foldmethod = 'syntax'
+vim.o.foldlevelstart = 99
+vim.o.foldminlines = 1
+
+-- Set the fold column width
+vim.o.foldcolumn = 'auto:1'
+
+vim.wo.foldcolumn = '1'
+
+-- Use Treesitter for better folding if available
+if pcall(require, 'nvim-treesitter.configs') then
+  vim.o.foldmethod = 'expr'
+  vim.o.foldexpr = 'nvim_treesitter#foldexpr()'
+end
 
 vim.opt.swapfile = false
 vim.opt.backup = false
