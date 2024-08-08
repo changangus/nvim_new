@@ -99,4 +99,11 @@ return require('packer').startup(function(use)
   }
   use { 'mg979/vim-visual-multi' }
   use { 'fatih/vim-go' }
+  use { 'norcalli/nvim-colorizer.lua' }
+  use({
+    "stevearc/conform.nvim",
+    config = function()
+      require("conform").setup()
+    end,
+  })
 end)
