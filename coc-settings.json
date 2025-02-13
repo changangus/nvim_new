@@ -22,7 +22,4 @@
     }
   },
   "sumneko-lua.enableNvimLuaDev": true,
-  "coc.preferences.diagnostic.displayByAle": false,
-  "coc.preferences.diagnostic.autoRefresh": true,
-  "go.diagnostics.delay": 500
 }
