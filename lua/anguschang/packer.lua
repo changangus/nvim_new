@@ -4,6 +4,7 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
+  use "nvim-lua/plenary.nvim"
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
   -- nvim tree
@@ -26,7 +27,12 @@ return require('packer').startup(function(use)
   -- Github CoPilot
   use 'github/copilot.vim'
   -- Harpoon
-  use 'ThePrimeagen/harpoon'
+  use  {
+    'ThePrimeagen/harpoon',
+    branch = "harpoon2",
+    requires = {{ "nvim-lua/plenary.nvim" }}
+
+  }
   -- LuaLine
   use {
     'nvim-lualine/lualine.nvim',
