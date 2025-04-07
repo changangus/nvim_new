@@ -21,5 +21,12 @@
       }
     }
   },
-  "sumneko-lua.enableNvimLuaDev": true,
+  "prettier.documentSelectors": ["**/*.php", "**/*.go"],
+
+  "prettier.formatterPriority": 1,
+
+  "prettier.tabWidth": 2,
+  "prettier.useTabs": false,
+  "prettier.printWidth": 120,
+  "prettier.singleQuote": false
 }
