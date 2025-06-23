@@ -28,11 +28,11 @@ return require('packer').startup(function(use)
   use 'github/copilot.vim'
   -- Harpoon
   use  {
-    'ThePrimeagen/harpoon',
-    branch = "harpoon2",
-    requires = {{ "nvim-lua/plenary.nvim" }}
-
+   'ThePrimeagen/harpoon',
+   branch = "harpoon2",
+   requires = {{ "nvim-lua/plenary.nvim" }}
   }
+
   -- LuaLine
   use {
     'nvim-lualine/lualine.nvim',
