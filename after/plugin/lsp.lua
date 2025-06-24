@@ -51,12 +51,12 @@ local on_attach = function(client, bufnr)
   -- vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
 
   -- Documentation
-  vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+  vim.keymap.set('n', 'H', vim.lsp.buf.hover, opts)
   vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
 
   -- Code actions
   vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
-  vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, opts)
+  vim.keymap.set({ 'n', 'v' }, '<leader>qf', vim.lsp.buf.code_action, opts)
   vim.keymap.set('n', '<leader>f', function() vim.lsp.buf.format { async = true } end, opts)
 
   -- Diagnostics

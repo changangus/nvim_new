@@ -49,6 +49,7 @@ vim.keymap.set('n', 'gr', function()
 end, { desc = 'Go to references' })
 vim.keymap.set('n', 'gi', builtin.lsp_implementations, { desc = 'Go to implementation' })
 vim.keymap.set('n', 'gy', builtin.lsp_type_definitions, { desc = 'Go to type definition' })
+vim.keymap.set('n', '<leader>a', builtin.diagnostics, { desc = 'Show diagnostics' })
 
 -- Additional LSP telescope features
 vim.keymap.set('n', '<leader>ds', builtin.lsp_document_symbols, { desc = 'Document symbols' })

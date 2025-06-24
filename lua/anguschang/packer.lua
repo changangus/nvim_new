@@ -65,16 +65,6 @@ return require('packer').startup(function(use)
     'lewis6991/gitsigns.nvim',
     -- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
   }
-  -- autosave
-  use({
-    "Pocco81/auto-save.nvim",
-    config = function()
-      require("auto-save").setup {
-        enabled = false
-
-      }
-    end,
-  })
   -- autopairs
   use {
     'windwp/nvim-autopairs',
