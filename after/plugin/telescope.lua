@@ -3,6 +3,12 @@ local builtin = require('telescope.builtin')
 -- Setup telescope with better defaults
 require('telescope').setup({
   defaults = {
+    initial_mode = "normal",
+    path_display = { "truncate" },
+    layout_config = {
+      preview_cutoff = 0,
+      preview_width = 0.6,
+    },
     file_ignore_patterns = {
       "node_modules",
       ".git/",
